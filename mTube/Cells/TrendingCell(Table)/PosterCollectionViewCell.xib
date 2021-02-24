@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PosterCollectionViewCell" customModule="mTube" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music" translatesAutoresizingMaskIntoConstraints="NO" id="Rdu-tY-gIa">
+                        <rect key="frame" x="15" y="5" width="75" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="IlR-73-Ztw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Official Trailer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSY-hM-R1D">
+                        <rect key="frame" x="105" y="115" width="225" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="SQe-fm-UJD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lala land" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmi-cA-HJ2">
+                        <rect key="frame" x="105" y="95" width="225" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="iWm-3E-8C2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="rSY-hM-R1D" firstAttribute="top" secondItem="Mmi-cA-HJ2" secondAttribute="bottom" id="4X3-Z8-uzM"/>
+                <constraint firstItem="rSY-hM-R1D" firstAttribute="leading" secondItem="Rdu-tY-gIa" secondAttribute="trailing" constant="15" id="644-7A-LcY"/>
+                <constraint firstItem="Mmi-cA-HJ2" firstAttribute="leading" secondItem="Rdu-tY-gIa" secondAttribute="trailing" constant="15" id="9YD-yy-ODa"/>
+                <constraint firstItem="Rdu-tY-gIa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="IHg-Lw-WXM"/>
+                <constraint firstItem="Rdu-tY-gIa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ish-IC-Ygt"/>
+                <constraint firstAttribute="bottom" secondItem="Rdu-tY-gIa" secondAttribute="bottom" constant="15" id="Ohx-4a-r7R"/>
+                <constraint firstAttribute="trailing" secondItem="Mmi-cA-HJ2" secondAttribute="trailing" constant="20" id="PvE-Vt-R8y"/>
+                <constraint firstAttribute="trailing" secondItem="rSY-hM-R1D" secondAttribute="trailing" constant="20" id="ViN-mH-Oej"/>
+                <constraint firstAttribute="bottom" secondItem="rSY-hM-R1D" secondAttribute="bottom" constant="15" id="bdg-HP-5tM"/>
+            </constraints>
+            <connections>
+                <outlet property="posterImageView" destination="Rdu-tY-gIa" id="0jN-7v-Bvo"/>
+                <outlet property="posterNameLabel" destination="Mmi-cA-HJ2" id="apT-zW-w0D"/>
+                <outlet property="videoTypeLabel" destination="rSY-hM-R1D" id="p1n-Kh-UDK"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="105.80357142857143"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Music" width="1238" height="688"/>
+    </resources>
+</document>

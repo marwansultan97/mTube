@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenresCollectionViewCell" id="gTV-IL-0wX" customClass="GenresCollectionViewCell" customModule="mTube" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Action" translatesAutoresizingMaskIntoConstraints="NO" id="3wx-im-Ymq">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="115"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssx-J6-JCE" userLabel="opacityView">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCI-FI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uij-Si-c6y">
+                                <rect key="frame" x="57" y="46" width="56.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.2872966609589041" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uij-Si-c6y" firstAttribute="centerX" secondItem="Ssx-J6-JCE" secondAttribute="centerX" id="Dh6-v4-tTR"/>
+                            <constraint firstItem="Uij-Si-c6y" firstAttribute="centerY" secondItem="Ssx-J6-JCE" secondAttribute="centerY" id="pQl-dW-TeJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="3wx-im-Ymq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="58O-ru-59B"/>
+                <constraint firstItem="3wx-im-Ymq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CXc-G2-cMY"/>
+                <constraint firstItem="Ssx-J6-JCE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Jvt-fH-hmd"/>
+                <constraint firstItem="Ssx-J6-JCE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ohr-J1-Uql"/>
+                <constraint firstAttribute="bottom" secondItem="3wx-im-Ymq" secondAttribute="bottom" id="QRa-fE-egu"/>
+                <constraint firstAttribute="bottom" secondItem="Ssx-J6-JCE" secondAttribute="bottom" id="ZNL-Hf-VBB"/>
+                <constraint firstAttribute="trailing" secondItem="3wx-im-Ymq" secondAttribute="trailing" id="d2Q-mE-jo9"/>
+                <constraint firstAttribute="trailing" secondItem="Ssx-J6-JCE" secondAttribute="trailing" id="lg5-x8-RyE"/>
+            </constraints>
+            <size key="customSize" width="152" height="107"/>
+            <connections>
+                <outlet property="genreImageView" destination="3wx-im-Ymq" id="048-EH-irk"/>
+                <outlet property="genreNameLabel" destination="Uij-Si-c6y" id="Cxy-bh-62b"/>
+                <outlet property="opacityView" destination="Ssx-J6-JCE" id="XpK-Pz-UgN"/>
+            </connections>
+            <point key="canvasLocation" x="123.18840579710145" y="94.084821428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Action" width="620" height="450"/>
+    </resources>
+</document>

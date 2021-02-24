@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoCollectionViewCell" customModule="mTube" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-r8-sDi">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-wk-RuT">
+                        <rect key="frame" x="100" y="90" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Y33-L6-Of4"/>
+                            <constraint firstAttribute="width" constant="50" id="ihm-n9-Qou"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal">
+                            <imageReference key="image" image="icons8-play_button_circled" symbolScale="large"/>
+                        </state>
+                        <connections>
+                            <action selector="playButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="JZf-Te-oHd"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uF3-r8-sDi" secondAttribute="bottom" id="HgC-IM-22L"/>
+                <constraint firstItem="N6M-wk-RuT" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LFC-n4-Oik"/>
+                <constraint firstAttribute="trailing" secondItem="uF3-r8-sDi" secondAttribute="trailing" id="Rrw-86-WxT"/>
+                <constraint firstItem="uF3-r8-sDi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gvo-YC-uNQ"/>
+                <constraint firstItem="N6M-wk-RuT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="liu-Mj-BTF"/>
+                <constraint firstItem="uF3-r8-sDi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="n27-i6-lKC"/>
+            </constraints>
+            <connections>
+                <outlet property="playButton" destination="N6M-wk-RuT" id="TCz-Q8-aiE"/>
+                <outlet property="videoImageView" destination="uF3-r8-sDi" id="HMX-Px-am5"/>
+            </connections>
+            <point key="canvasLocation" x="87" y="106"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Music" width="1238" height="688"/>
+        <image name="icons8-play_button_circled" width="100" height="100"/>
+    </resources>
+</document>
