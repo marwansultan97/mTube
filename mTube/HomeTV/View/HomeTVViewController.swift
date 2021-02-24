@@ -160,7 +160,7 @@ extension HomeTVViewController: UITableViewDelegate, UITableViewDataSource {
             cell.cardCellOptions = .MostPopularTV
             cell.tvModels = self.mostPopularTV
             
-            cell.cellSelection = { [weak self] (movie, tv, filmography) in
+            cell.cellSelection = { [weak self] (movie, tv, filmography, cast) in
                 guard let self = self else { return }
                 self.tvSelection(tv: tv!)
             }
@@ -177,7 +177,7 @@ extension HomeTVViewController: UITableViewDelegate, UITableViewDataSource {
             cell.cardCellOptions = .topRatedTV
             cell.tvModels = self.topRatedTV
             
-            cell.cellSelection = { [weak self] (movie, tv, filmography) in
+            cell.cellSelection = { [weak self] (movie, tv, filmography, cast) in
                 guard let self = self else { return }
                 self.tvSelection(tv: tv!)
             }

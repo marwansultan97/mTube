@@ -18,7 +18,7 @@ class CardsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var starHeight: NSLayoutConstraint!
     @IBOutlet weak var starImageView: UIImageView!
     @IBOutlet weak var rateLabelLeading: NSLayoutConstraint!
-    @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var obacityView: UIView!
     
     
     override func awakeFromNib() {
@@ -29,17 +29,20 @@ class CardsCollectionViewCell: UICollectionViewCell {
     
     func configureUI() {
         backgroundColor = UIColor.blue.darken(byPercentage: 0.85)
-        layer.cornerRadius = 8
+        layer.cornerRadius = 10
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = .zero
         layer.shadowOpacity = 1
         layer.shadowRadius = 3
         
-        let path = UIBezierPath(roundedRect: movieImageView.bounds, byRoundingCorners: [.allCorners], cornerRadii: CGSize(width: 8, height: 8))
+        obacityView.layer.masksToBounds = false
+        movieImageView.layer.cornerRadius = 10
+        
+        let path = UIBezierPath(roundedRect: obacityView.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 10, height: 10))
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
-        movieImageView.layer.mask = shapeLayer
+        obacityView.layer.mask = shapeLayer
     }
     
     func configureTopRated(movieModel: MoviesResult?, tvModel: TvResult?) {

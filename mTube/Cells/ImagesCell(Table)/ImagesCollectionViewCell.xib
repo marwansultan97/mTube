@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Family" translatesAutoresizingMaskIntoConstraints="NO" id="Wq4-nh-oF8">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wq4-nh-oF8">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="200"/>
                     </imageView>
                 </subviews>
@@ -35,7 +35,4 @@
             <point key="canvasLocation" x="345.6521739130435" y="131.91964285714286"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="Family" width="840" height="400"/>
-    </resources>
 </document>

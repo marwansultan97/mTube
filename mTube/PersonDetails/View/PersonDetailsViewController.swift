@@ -135,7 +135,7 @@ extension PersonDetailsViewController: UITableViewDelegate, UITableViewDataSourc
             boldAttributes.append(mediumAttributes)
             cell.categoryLabel.attributedText = boldAttributes
             
-            cell.cellSelection = { [weak self] (movie, tv, filmography) in
+            cell.cellSelection = { [weak self] (movie, tv, filmography, cast) in
                 guard let self = self else { return }
                 guard let filmography = filmography else { return }
                 self.goToShowDetail(id: filmography.id)

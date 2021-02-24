@@ -108,6 +108,13 @@ class ShowDetailsViewController: UIViewController, YTPlayerViewDelegate {
         }
     }
     
+    func goToPersonDetails(cast: Cast) {
+        let vc = UIStoryboard(name: "PersonDetails", bundle: nil).instantiateInitialViewController() as? PersonDetailsViewController
+        vc?.id = cast.id
+        vc?.title = cast.name
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 
 }
 
@@ -154,6 +161,12 @@ extension ShowDetailsViewController: UITableViewDelegate, UITableViewDataSource,
             cell.cardCellOptions = .showCast
             cell.showCast = self.showCast
             cell.categoryLabel.text = "Cast"
+            
+            cell.cellSelection = { [weak self] (movie, tv, filmogrphy, cast) in
+                guard let cast = cast else { return }
+                self?.goToPersonDetails(cast: cast)
+            }
+            
             cell.seeAllButton.alpha = 0
             return cell
         } else {

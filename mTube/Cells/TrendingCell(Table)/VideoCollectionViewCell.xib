@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-r8-sDi">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-r8-sDi">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-wk-RuT">
@@ -53,7 +53,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Music" width="1238" height="688"/>
         <image name="icons8-play_button_circled" width="100" height="100"/>
     </resources>
 </document>

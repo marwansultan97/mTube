@@ -48,7 +48,7 @@ class CardsTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     var cardCellOptions: CardCellOptions?
     var upcomingDateString: String = ""
     
-    var cellSelection: ((_ movies: MoviesResult?, _ tv: TvResult?, _ filmography: Filmography?)->())?
+    var cellSelection: ((_ movies: MoviesResult?, _ tv: TvResult?, _ filmography: Filmography?, _ person: Cast?)->())?
     var seeAllTapped: (()->())?
     
     
@@ -86,7 +86,7 @@ class CardsTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     
     //MARK: - CollectionView Configurations
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 130, height: 280)
+        return CGSize(width: 130, height: 250)
     }
     
     
@@ -172,17 +172,22 @@ class CardsTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         
         case .mostPopularMovies, .topRatedMovies, .UpComingMovies:
             let model = moviesModels[indexPath.row]
-            cellSelection?(model, nil, nil)
+            cellSelection?(model, nil, nil, nil)
             
         case .MostPopularTV, .topRatedTV:
             let model = tvModels[indexPath.row]
-            cellSelection?(nil, model, nil)
+            cellSelection?(nil, model, nil, nil)
         
-        case .none, .showCast:
-            break
+        case .showCast:
+            let model = showCast[indexPath.row]
+            cellSelection?(nil, nil, nil, model)
+        
         case .personFilmography:
             let model = personFilmography[indexPath.row]
-            cellSelection?(nil, nil, model)
+            cellSelection?(nil, nil, model, nil)
+            
+        case .none:
+            break
         }
         
     }

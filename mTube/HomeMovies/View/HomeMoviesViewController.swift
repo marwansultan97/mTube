@@ -186,7 +186,7 @@ extension HomeMoviesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.cardCellOptions = .mostPopularMovies
             cell.moviesModels = self.mostPopularMovies
             
-            cell.cellSelection = { [weak self] (movie, tv, filmography) in
+            cell.cellSelection = { [weak self] (movie, tv, filmography, cast) in
                 guard let movie = movie else { return }
                 self?.moviesSelection(movie: movie)
             }
@@ -203,7 +203,7 @@ extension HomeMoviesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.cardCellOptions = .topRatedMovies
             cell.moviesModels = self.topRatedMovies
             
-            cell.cellSelection = { [weak self] (movie, tv, filmography) in
+            cell.cellSelection = { [weak self] (movie, tv, filmography, cast) in
                 guard let movie = movie else { return }
                 self?.moviesSelection(movie: movie)
             }
@@ -221,7 +221,7 @@ extension HomeMoviesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.moviesModels = self.upcomingMovies
             cell.upcomingDateString = self.upcominDate
             
-            cell.cellSelection = { [weak self] (movie, tv, filmography) in
+            cell.cellSelection = { [weak self] (movie, tv, filmography, cast) in
                 guard let movie = movie else { return }
                 self?.moviesSelection(movie: movie)
             }

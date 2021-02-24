@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="162" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snf-m4-Qyy">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snf-m4-Qyy">
                         <rect key="frame" x="0.0" y="0.0" width="162" height="300"/>
                     </imageView>
                 </subviews>
@@ -35,7 +35,4 @@
             <point key="canvasLocation" x="166.66666666666669" y="171.42857142857142"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="dummy" width="200" height="300"/>
-    </resources>
 </document>

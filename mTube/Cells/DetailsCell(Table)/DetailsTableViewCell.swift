@@ -45,6 +45,7 @@ class DetailsTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     func configureUI() {
         contentView.backgroundColor = UIColor.flatBlue().darken(byPercentage: 0.45)
         line3.backgroundColor = UIColor.gray.darken(byPercentage: 0.5)
+        showNameLabel.adjustsFontSizeToFitWidth = true
     }
     
     func configureCollectionView() {
